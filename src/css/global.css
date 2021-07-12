@@ -1,0 +1,38 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Nunito+Sans&display=swap');
+
+/* Variables */
+:root {
+  --dark-blue: #0e1932;
+  --light-blue: #d2e6ef;
+  --white: #ffffff;
+  --gray: #565b6d;
+  --green: #0ca678;
+}
+
+/* Global styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Libre Franklin', sans-serif;
+}

@@ -1,0 +1,30 @@
+.header {
+  width: 100%;
+  padding: 1.8rem 0;
+  color: var(--white);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.headerText {
+  font-size: 5.6rem;
+  margin-bottom: 1.8rem;
+}
+
+.form {
+  font-size: 1.8rem;
+}
+
+.form > * {
+  margin-right: 1.2rem;
+}
+
+.input,
+.btn {
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem 1.4rem;
+}

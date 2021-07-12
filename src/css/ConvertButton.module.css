@@ -1,0 +1,21 @@
+.convertButton {
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.8rem;
+  padding: 1.4rem 2.4rem;
+}
+
+.convertButton:hover {
+  cursor: pointer;
+}
+
+.convertButtonPrimary {
+  background-color: var(--white);
+  color: var(--dark-blue);
+}
+
+.convertButtonAlt {
+  background-color: var(--green);
+  color: var(--white);
+}
