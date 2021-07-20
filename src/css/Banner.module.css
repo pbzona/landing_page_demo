@@ -1,0 +1,14 @@
+.banner {
+  width: 100%;
+  background-color: var(--light-blue);
+  padding: 1.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bannerText {
+  font-size: 2.4rem;
+  color: var(--dark-blue);
+}
