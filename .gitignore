@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Simulation scripts
+simulation/venv
+simulation/__pycache__
+simulation/.env
