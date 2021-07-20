@@ -3,6 +3,8 @@ import styles from '../css/Header.module.css';
 
 import store from 'store';
 import md5 from 'md5';
+
+import createUserContext from '../helpers/createUserContext';
 import { useLDClient } from 'launchdarkly-react-client-sdk';
 
 function Header() {
@@ -12,19 +14,12 @@ function Header() {
   function simulateLogin(event) {
     event.preventDefault();
     if (username) {
-      const name = username;
-      const email = `${username}@hotmail.gov`;
-
-      store.set('name', username);
+      store.set('username', username);
       store.set('key', md5(username));
 
-      let userObject = {
-        name,
-        key: md5(username),
-        email,
-      };
+      let ctx = createUserContext(username);
 
-      ldClient.identify(userObject, null, function () {
+      ldClient.identify(ctx, null, function () {
         console.log(`Now logged in as: ${username}`);
       });
     }
