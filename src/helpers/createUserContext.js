@@ -8,7 +8,7 @@ function createUserContext(username) {
     key: md5(username),
     firstName: faker.name.firstName(),
     lastName: faker.name.lastName(),
-    state: faker.address.stateAbbr(),
+    state: faker.address.state(),
     country: 'USA',
     email: `${username}@hotmail.gov`,
     custom: {
