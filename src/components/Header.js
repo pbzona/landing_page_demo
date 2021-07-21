@@ -5,11 +5,12 @@ import store from 'store';
 import md5 from 'md5';
 
 import createUserContext from '../helpers/createUserContext';
-import { useLDClient } from 'launchdarkly-react-client-sdk';
+import { useLDClient, useFlags } from 'launchdarkly-react-client-sdk';
 
 function Header() {
   const ldClient = useLDClient();
   const [username, setUsername] = useState('Sample User');
+  const { messagingHeader } = useFlags();
 
   function simulateLogin(event) {
     event.preventDefault();
@@ -31,7 +32,7 @@ function Header() {
 
   return (
     <header className={styles.header}>
-      <h1 className={styles.headerText}>Book Your Trip to Space</h1>
+      <h1 className={styles.headerText}>{messagingHeader}</h1>
       <form className={styles.form} onSubmit={simulateLogin}>
         <label className={styles.label} htmlFor="user">
           Username:{' '}
