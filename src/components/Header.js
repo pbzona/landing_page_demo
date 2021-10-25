@@ -32,7 +32,7 @@ function Header() {
 
   return (
     <header className={styles.header}>
-      <h1 className={styles.headerText}>{messagingHeader}</h1>
+      <h1 className={styles.headerText}>{messagingHeader || "Book your trip to space!"}</h1>
       <form className={styles.form} onSubmit={simulateLogin}>
         <label className={styles.label} htmlFor="user">
           Username:{' '}
