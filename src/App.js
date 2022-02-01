@@ -8,14 +8,14 @@ import './css/global.css';
 import { useFlags } from 'launchdarkly-react-client-sdk';
 
 function App() {
-  const { showCtaBanner } = useFlags();
+  const { showBanner, showIncidentMessage } = useFlags();
 
   const flags = useFlags();
 
   console.log(flags);
   return (
     <>
-      {showCtaBanner && <Banner />}
+      {showBanner && <Banner isIncident={showIncidentMessage} />}
       <Header />
       <main>
         <Logo />
