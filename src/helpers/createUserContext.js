@@ -5,7 +5,7 @@ function createUserContext(username) {
   const betaChance = 15; // This is the percentage chance a user will fall into the beta group
 
   let context = {
-    key: md5(username),
+    key: username,
     firstName: faker.name.firstName(),
     lastName: faker.name.lastName(),
     state: faker.address.state(),
